@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.haldane.katherine.kh_jl_taxi2me" >
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:uiOptions="splitActionBarWhenNarrow">
+        <activity
+            android:name=".Splash"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterPreferences"
+            android:label="@string/title_activity_register_preferences"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name=".CallCab"
+            android:label="@string/title_activity_call_cab"
+            android:noHistory="true">
+        </activity>
+        <activity
+            android:name=".TaxiMap"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/title_activity_taxi_map" >
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name=".PaymentReceipt"
+            android:label="@string/title_activity_payment_receipt" >
+        </activity>
+        <activity
+            android:name=".GPSService"
+            android:label="@string/title_activity_gpsservice" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCDYpFoIdTSUfZmVGw6KuPMr8AlyI0Qszk" />
+        <service
+            android:name=".Taxi2MeService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.haldane.katherine.USER_ACTION" />
+            </intent-filter>
+        </service>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+</manifest>

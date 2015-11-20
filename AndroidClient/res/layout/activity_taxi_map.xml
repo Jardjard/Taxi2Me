@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haldane.katherine.kh_jl_taxi2me.TaxiMap">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+     <LinearLayout
+         android:id="@+id/fragmentLayout"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_above="@+id/buttonFooter"
+         android:layout_weight="1">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                tools:context=".MapsActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+     </LinearLayout>
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:id="@+id/creditInfoLayout"
+            android:visibility="gone"
+            android:background="@drawable/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:background="@drawable/creditcardheader"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textbackground"
+                    android:padding="10dp"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/preference_information"
+                    android:id="@+id/textViewInformation" />
+
+                <EditText
+                    android:textColor="#4E3F30"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonbg"
+                    android:padding="10dp"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/editTextName"
+                    android:hint="Name"
+                    android:textColorHint="#F8F4E4"/>
+
+
+                <RelativeLayout
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="306dp">
+
+                    <Spinner
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="306dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/buttonbg"
+                        android:popupBackground="#FEFEEB"
+                        android:id="@+id/spinnerCardType"
+                        android:spinnerMode="dropdown"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="arrow"
+                        android:id="@+id/arrow"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#FFFFFF"
+                        android:layout_alignEnd="@+id/spinnerCardType"
+                        android:paddingTop="30dp"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:textColor="#4E3F30"
+                    android:inputType="number"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/buttonbg"
+                    android:padding="10dp"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/editTextCreditCardNumber"
+                    android:hint="Credit Card Number"
+                    android:textColorHint="#F8F4E4"/>
+
+                <EditText
+                    android:textColor="#4E3F30"
+                    android:inputType="number"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/buttonbg"
+                    android:padding="10dp"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/editTextCcv"
+                    android:hint="ccv"
+                    android:textColorHint="#F8F4E4" />
+
+                <RelativeLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="306dp"
+                    android:layout_height="fill_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/dateLayout"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_alignTop="@+id/editTextDate">
+
+                        <DatePicker
+                            android:background="@drawable/buttonbg"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:id="@+id/datePickerFrag"
+                            android:calendarViewShown="false"
+                            />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:textColor="#4E3F30"
+                        android:visibility="visible"
+                        android:editable="false"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/buttonbg"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="0dp"
+                        android:layout_width="306dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/editTextDate"
+                        android:hint="Expire Date"
+                        android:textColorHint="#F8F4E4"
+                        android:onClick="onClick" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingRight="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cal"
+                        android:id="@+id/calendar"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#FFFFFF"
+                        android:layout_alignLeft="@+id/editTextDate"
+                        android:paddingTop="10dp"
+                        android:onClick="onClick" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dateButtons"
+                    android:visibility="gone"
+                    android:layout_marginTop="-13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/editTextName">
+
+                    <LinearLayout
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="306dp"
+                        android:layout_height="fill_parent">
+
+                        <Button
+                            android:padding="10dp"
+                            android:layout_marginTop="13dp"
+                            android:text="Set"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonSet"
+                            android:onClick="onButtonClick"
+                            android:textColor="#FEFEEB"
+                            android:background="@drawable/buttonshape"
+                            android:layout_weight="0.5" />
+
+                        <Button
+                            android:padding="10dp"
+                            android:layout_marginTop="13dp"
+                            android:text="Cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonCancel"
+                            android:onClick="onButtonClick"
+                            android:textColor="#FEFEEB"
+                            android:background="@drawable/buttonshape"
+                            android:layout_weight="0.5"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp"
+                    android:text="Update Information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonUpdateInfo"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="onButtonClick"
+                    android:textColor="#FEFEEB"
+                    android:background="@drawable/buttonshape"  />
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/buttonFooter"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_alignParentEnd="true">
+
+             <Button
+                android:padding="18dp"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/buttonbg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Map"
+                android:id="@+id/buttonMap"
+                android:layout_weight="1"
+                 android:onClick="onButtonClick" />
+
+            <TextView
+                android:background="#FFFFFF"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView"/>
+
+            <Button
+                android:padding="18dp"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/buttonbg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/buttonCancelTaxi"
+                android:layout_weight="1"
+                android:onClick="onButtonClick" />
+
+            <TextView
+                android:background="#FFFFFF"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView2"/>
+
+            <Button
+                android:visibility="gone"
+                android:padding="18dp"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/buttonbg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit Info"
+                android:id="@+id/buttonCreditInfo"
+                android:layout_weight="1"
+                android:onClick="onButtonClick" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:textColor="#4E3F30"
+        android:padding="15dp"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="**Your taxi has not been assigned!** \n Please hold while it is being dispatched to your location!"
+        android:id="@+id/mapNotification"
+        android:layout_weight="1" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taxi2Me</string>
+    <string name="cash">cash</string>
+    <string name="credit">credit</string>
+    <string name="credit_details">credit details</string>
+    <string name="preference_call">Preference Number</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register_preferences">RegisterPreferences</string>
+    <string name="title_activity_call_cab">Call Taxi</string>
+    <string name="title_activity_user_preferences">UserPreferences</string>
+    <string name="title_activity_taxi_map"></string>
+    <string name="title_activity_dispatcher_orders">DispatcherOrders</string>
+    <string name="title_activity_payment_receipt">PaymentReceipt</string>
+    <string name="register_preference">Register Preferences</string>
+    <string name="preference_information">Please enter credit information if you wish to pay for your ride through Taxi2Me!</string>
+    <string name="Call_Cab">Order Taxi!</string>
+    <string name="title_activity_about">About</string>
+    <string name="Cashrbtn">Pay in Taxi</string>
+    <string name="rbCredit">Pay by Phone</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Save_Icon">Save</string>
+    <string name="title_activity_service">Service</string>
+    <string name="title_activity_new_service">newService</string>
+    <string name="title_activity_gpsservice">GPSService</string>
+    <string name="title_activity_simple_text_client">SimpleTextClientActivity</string>
+    <string name="Touch_To_Call">Touch to Call!</string>
+    <string name="cancel_taxi">Cancel Taxi</string>
+    <string name="my_credit_info">Credit Info</string>
+    <string name="map">Map</string>
+    <string name="cab_info">Taxi Information</string>
+    <string name="Taxi_Company">Taxi Company:</string>
+    <string name="Time">Duration of Ride:</string>
+    <string name="Price">Total Cost of Ride:</string>
+    <string name="Email_Receipt">Save Receipt</string>
+    <string name="Continue">Continue</string>
+    <string name="Client_Info">Client Information</string>
+    <string name="Name">Name:</string>
+    <string name="Credit_Card_No">Card Number:</string>
+    <string name="Credit_Type">Card Type</string>
+    <string name="Transaction">Transaction</string>
+    <string name="Order_ID">Order ID:</string>
+    <string name="Total">Total Processed:</string>
+    <string name="Status">Status:</string>
+    <string name="katherinehaldane">Katherine Haldane</string>
+    <string name="jaredlerner">Jared Lerner</string>
+    <string name="year">2014</string>
+
+    <string name="CompanyName">JarKat Taxi</string>
+    <string name="durationValue">10 minutes</string>
+    <string name="TotalPrice">$0.00</string>
+    <string name="client_name">Bob Dobolina</string>
+    <string name="card_type">unknown</string>
+    <string name="card_no">xxxxxxxxxxxxxxxx</string>
+    <string name="order_no">987AR5</string>
+    <string name="total_paid">$0.00</string>
+    <string name="transaction_status">approved</string>
+
+
+
+</resources>

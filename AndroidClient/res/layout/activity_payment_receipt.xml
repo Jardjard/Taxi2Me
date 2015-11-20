@@ -1,0 +1,336 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.haldane.katherine.kh_jl_taxi2me.PaymentReceipt"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:background="@drawable/paymentreceipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewReceiptHeader"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="#FEFEEB"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#4E3F30"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/cab_info"
+                android:id="@+id/textViewCanInfo" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Taxi_Company"
+                    android:id="@+id/textViewCabName"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/CompanyName"
+                    android:id="@+id/textViewCabName2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1" >
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Time"
+                    android:id="@+id/textViewTime"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/durationValue"
+                    android:id="@+id/textViewTime2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1" >
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Price"
+                    android:id="@+id/textViewPrice"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/TotalPrice"
+                    android:id="@+id/textViewPrice2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:background="#FEFEEB"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#4E3F30"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/Client_Info"
+                android:id="@+id/textViewClientHeader" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Name"
+                    android:id="@+id/textViewClientName"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/client_name"
+                    android:id="@+id/textViewClientName2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Credit_Type"
+                    android:id="@+id/textViewClientCardType"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/card_type"
+                    android:id="@+id/textViewClientCardType2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Credit_Card_No"
+                    android:id="@+id/textViewClientCardNo"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/card_no"
+                    android:id="@+id/textViewClientCardNo2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:background="#FEFEEB"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/transactionLayout"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/Transaction"
+                android:id="@+id/textViewTransaction" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="1">
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Order_ID"
+                    android:id="@+id/textViewOrderID"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/order_no"
+                    android:id="@+id/textViewOrderID2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Total"
+                    android:id="@+id/textViewTotalCost"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/total_paid"
+                    android:id="@+id/textViewTotalCost2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="1" >
+
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Status"
+                    android:id="@+id/textViewStatus"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:textColor="#4E3F30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/transaction_status"
+                    android:id="@+id/textViewStatus2"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:textColor="#FEFEEB"
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Email_Receipt"
+        android:id="@+id/buttonEmail"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:textColor="#FEFEEB"
+        android:background="@drawable/buttonshape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Continue"
+        android:id="@+id/buttonContinueHome"
+        android:layout_below="@+id/buttonEmail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onButtonClick" />
+
+</RelativeLayout>
+

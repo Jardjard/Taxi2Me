@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context="com.haldane.katherine.taxi2me.RegisterPreferences">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@drawable/creditcardheader"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbackground"
+                android:padding="10dp"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/preference_information"
+                android:id="@+id/textViewInformation" />
+
+            <EditText
+                android:textColor="#4E3F30"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonbg"
+                android:padding="10dp"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/editTextName"
+                android:hint="Name"
+                android:textColorHint="#F8F4E4"/>
+
+
+            <RelativeLayout
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="306dp">
+
+                <Spinner
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/buttonbg"
+                    android:popupBackground="#FEFEEB"
+                    android:id="@+id/spinnerCardType"
+                    android:spinnerMode="dropdown"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="arrow"
+                    android:id="@+id/arrow"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignEnd="@+id/spinnerCardType"
+                    android:paddingTop="30dp"/>
+            </RelativeLayout>
+
+            <EditText
+                android:textColor="#4E3F30"
+                android:inputType="number"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buttonbg"
+                android:padding="10dp"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/editTextCreditCardNumber"
+                android:hint="Credit Card Number"
+                android:textColorHint="#F8F4E4"/>
+
+            <EditText
+                android:textColor="#4E3F30"
+                android:inputType="number"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buttonbg"
+                android:padding="10dp"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/editTextCcv"
+                android:hint="ccv"
+                android:textColorHint="#F8F4E4" />
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="306dp"
+                android:layout_height="fill_parent">
+
+                <RelativeLayout
+                    android:id="@+id/dateLayout"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignTop="@+id/editTextDate">
+
+                    <DatePicker
+                        android:background="@drawable/buttonbg"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:id="@+id/datePickerFrag"
+                        android:calendarViewShown="false"
+                        />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:textColor="#4E3F30"
+                    android:visibility="visible"
+                    android:editable="false"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/buttonbg"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="0dp"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/editTextDate"
+                    android:hint="Expire Date"
+                    android:textColorHint="#F8F4E4"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:paddingRight="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cal"
+                    android:id="@+id/calendar"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignLeft="@+id/editTextDate"
+                    android:paddingTop="10dp"
+                    android:onClick="onClick" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dateButtons"
+                android:visibility="gone"
+                android:layout_marginTop="-13dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/editTextName">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="306dp"
+                    android:layout_height="fill_parent">
+
+                    <Button
+                        android:layout_marginTop="13dp"
+                        android:text="Set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/buttonSet"
+                        android:onClick="onButtonClick"
+                        android:textColor="#FEFEEB"
+                        android:background="@drawable/buttonshape"
+                        android:layout_weight="0.5" />
+
+                    <Button
+                        android:layout_marginTop="13dp"
+                        android:text="Cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/buttonCancel"
+                        android:onClick="onButtonClick"
+                        android:textColor="#FEFEEB"
+                        android:background="@drawable/buttonshape"
+                        android:layout_weight="0.5"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:text="Skip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonSkip"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onButtonClick"
+                android:textColor="#FEFEEB"
+                android:background="@drawable/buttonshape" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:text="Save Preferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonContinue"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onButtonClick"
+                android:textColor="#FEFEEB"
+                android:background="@drawable/buttonshape"  />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
